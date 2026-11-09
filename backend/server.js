@@ -30,6 +30,7 @@ mongoose.connect(process.env.MONGO_URI || "mongodb://127.0.0.1:27017/hrmDB")
   .then(async () => {
     console.log("MongoDB connected");
     await seedIfEmpty();
+    module.exports = app;
     app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
   })
   .catch((e) => { console.error("MongoDB connection failed:", e.message); process.exit(1); });
