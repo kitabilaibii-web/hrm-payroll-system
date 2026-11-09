@@ -36,7 +36,7 @@ app.use((err, req, res, next) => {
   if (err.code === 11000) return res.status(400).json({ message: "This value already exists (duplicate)" });
   if (err.name === "CastError") return res.status(400).json({ message: "Invalid ID" });
   console.error(err);
-  res.status(500).json({ message: "Server error" });
+  res.status(500).json({ message: "Database connection failed", detail: e.message });
 });
 
 const PORT = process.env.PORT || 5000;
