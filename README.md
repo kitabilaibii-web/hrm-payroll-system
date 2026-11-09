@@ -1,4 +1,4 @@
-# HRM Pro - Complete HR and Payroll System (MERN)
+# HRM Pro  Complete HR and Payroll System (MERN)
 
 ## How to run (Windows)
 1. Make sure Node.js is installed and MongoDB is running on your computer.
